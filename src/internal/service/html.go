@@ -2,14 +2,15 @@ package service
 
 import (
 	"html"
+	"internal/enumeration"
 )
 
 // Html 根据 opt 运算符确定对 content 进行编/解码
 func Html(opt int, content string) string {
 	switch opt {
-	case 1: //todo enum // Encode
+	case enumeration.Encode:
 		return htmlEncode(content)
-	case 2: //todo enum // Decode
+	case enumeration.Decode:
 		return htmlDecode(content)
 	default:
 		return ""

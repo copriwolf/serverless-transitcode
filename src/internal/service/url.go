@@ -1,15 +1,16 @@
 package service
 
 import (
+	"internal/enumeration"
 	"net/url"
 )
 
 // Url 根据 opt 运算符确定对 content 进行编码/解码
 func Url(opt int, content string) string {
 	switch opt {
-	case 1: //todo enum // Encode
+	case enumeration.Encode:
 		return urlEncode(content)
-	case 2: //todo enum // Decode
+	case enumeration.Decode:
 		return urlDecode(content)
 	default:
 		return ""

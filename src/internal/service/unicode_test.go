@@ -7,7 +7,8 @@ import (
 
 var (
 	ctxOriginUnicode = `转换测试`
-	ctxEncodeUnicode = `\u8f6c\u6362\u6d4b\u8bd5`
+	ctxEncodeUnicodeDis = `\u8f6c\u6362\u6d4b\u8bd5`
+	ctxEncodeUnicode = "\u8f6c\u6362\u6d4b\u8bd5"
 
 	optUniEncode = 1
 	optUniDecode = 2
@@ -15,7 +16,7 @@ var (
 
 func TestUnicodeEncode(t *testing.T) {
 	input := ctxOriginUnicode
-	want := ctxEncodeUnicode
+	want := ctxEncodeUnicodeDis
 	opt := optUniEncode
 	if got := Unicode(opt, input); strings.ToLower(got) != want {
 		t.Errorf("Url(%d, %s) = %q, want %q", opt, input, got, want)

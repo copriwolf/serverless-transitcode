@@ -1,13 +1,17 @@
 package service
 
-import "encoding/base64"
+import (
+	"encoding/base64"
+
+	"internal/enumeration"
+)
 
 // Base64 根据 opt 运算符确定对 content 进行加解密
 func Base64(opt int, content string) string {
 	switch opt {
-	case 1: //todo enum // Encode
+	case enumeration.Encode:
 		return base64Encode(content)
-	case 2: //todo enum // Decode
+	case enumeration.Decode:
 		return base64Decode(content)
 	default:
 		return ""
