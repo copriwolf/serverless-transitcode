@@ -6,6 +6,10 @@
   <b> a serverless application for converting codes(base64, url, html, unicode, utf8<\>GBK) </b>
 </p>
 
+## 涉及云函数操作
+- **触发器**：API 网关
+- **代码配置** ：本地上传 zip 包
+
 ## 目前支持的格式
 - [X] **Base64**         加/解密 
 - [X] **Html**              编码/解码
